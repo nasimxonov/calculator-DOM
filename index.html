@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Kalkulyator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container"></div>
-    <script src="./main.js"></script>
+
+<body class="bg-white flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 shadow-xl rounded-2xl w-80">
+        <div id="display"
+            class="text-right text-black text-4xl mb-6 p-3 bg-gray-100 rounded h-20 flex items-center justify-end">0
+        </div>
+        <div class="grid grid-cols-4 gap-3">
+            <button onclick="clearDisplay()" class="bg-gray-300 py-4 rounded text-xl font-bold">C</button>
+            <button class="bg-gray-300 py-4 rounded text-xl font-bold">+/-</button>
+            <button onclick="percent()" class="bg-gray-300 py-4 rounded text-xl font-bold">%</button>
+            <button onclick="appendNumber('/')"
+                class="bg-orange-400 text-white py-4 rounded text-xl font-bold">÷</button>
+
+            <button onclick="appendNumber('7')" class="bg-gray-200 py-4 rounded text-xl">7</button>
+            <button onclick="appendNumber('8')" class="bg-gray-200 py-4 rounded text-xl">8</button>
+            <button onclick="appendNumber('9')" class="bg-gray-200 py-4 rounded text-xl">9</button>
+            <button onclick="appendNumber('*')"
+                class="bg-orange-400 text-white py-4 rounded text-xl font-bold">×</button>
+
+            <button onclick="appendNumber('4')" class="bg-gray-200 py-4 rounded text-xl">4</button>
+            <button onclick="appendNumber('5')" class="bg-gray-200 py-4 rounded text-xl">5</button>
+            <button onclick="appendNumber('6')" class="bg-gray-200 py-4 rounded text-xl">6</button>
+            <button onclick="appendNumber('-')"
+                class="bg-orange-400 text-white py-4 rounded text-xl font-bold">−</button>
+
+            <button onclick="appendNumber('1')" class="bg-gray-200 py-4 rounded text-xl">1</button>
+            <button onclick="appendNumber('2')" class="bg-gray-200 py-4 rounded text-xl">2</button>
+            <button onclick="appendNumber('3')" class="bg-gray-200 py-4 rounded text-xl">3</button>
+            <button onclick="appendNumber('+')"
+                class="bg-orange-400 text-white py-4 rounded text-xl font-bold">+</button>
+
+            <button onclick="appendNumber('0')" class="bg-gray-200 py-4 rounded text-xl col-span-2">0</button>
+            <button onclick="appendNumber(',')" class="bg-gray-200 py-4 rounded text-xl">,</button>
+            <button onclick="calculate()" class="bg-orange-500 text-white py-4 rounded text-xl font-bold">=</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
